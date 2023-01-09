@@ -1,6 +1,6 @@
 {
-  "name": "@metamask/providers",
-  "version": "10.2.1",
+  "name": "@prajjawal/qrl_providers",
+  "version":"1.0.0",
   "description": "A JavaScript Ethereum provider that connects to the wallet over a stream.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -22,15 +22,10 @@
     "lint:fix": "yarn lint:eslint --fix && yarn lint:misc --write",
     "prepublishOnly": "yarn build && yarn lint && yarn test"
   },
-  "author": "MetaMask",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/MetaMask/providers.git"
-  },
+  "author": "QRL",
+  "license": "ISC",
   "keywords": [
-    "MetaMask",
-    "Ethereum",
+    "QRL",
     "Provider"
   ],
   "bugs": {
