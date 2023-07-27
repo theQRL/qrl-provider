@@ -1,7 +1,7 @@
 {
-  "name": "@prajjawal/qrl_providers",
+  "name": "@theqrl/qrl_providers",
   "version":"1.1.0",
-  "description": "A JavaScript Ethereum provider that connects to the wallet over a stream.",
+  "description": "A JavaScript QRL provider that connects to the wallet over a stream.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "engines": {

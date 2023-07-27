@@ -3,7 +3,7 @@ import { MockConnectionStream } from '../test/mocks/MockConnectionStream';
 import {
   MetaMaskInpageProviderStreamName,
   MetaMaskInpageProvider,
-} from './MetaMaskInpageProvider';
+} from './QRLInpageProvider';
 import messages from './messages';
 
 /**

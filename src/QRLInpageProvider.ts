@@ -17,9 +17,9 @@ import {
 
 export interface SendSyncJsonRpcRequest extends JsonRpcRequest<unknown> {
   method:
-    | 'eth_accounts'
-    | 'eth_coinbase'
-    | 'eth_uninstallFilter'
+    | 'zond_accounts'
+    | 'zond_coinbase'
+    | 'zond_uninstallFilter'
     | 'net_version';
 }
 
@@ -255,7 +255,7 @@ export class MetaMaskInpageProvider extends AbstractStreamProvider {
     return new Promise<string[]>((resolve, reject) => {
       try {
         this._rpcRequest(
-          { method: 'eth_requestAccounts', params: [] },
+          { method: 'zond_requestAccounts', params: [] },
           getRpcPromiseCallback(resolve, reject),
         );
       } catch (error) {
@@ -339,15 +339,15 @@ export class MetaMaskInpageProvider extends AbstractStreamProvider {
   protected _sendSync(payload: SendSyncJsonRpcRequest) {
     let result;
     switch (payload.method) {
-      case 'eth_accounts':
+      case 'zond_accounts':
         result = this.selectedAddress ? [this.selectedAddress] : [];
         break;
 
-      case 'eth_coinbase':
+      case 'zond_coinbase':
         result = this.selectedAddress || null;
         break;
 
-      case 'eth_uninstallFilter':
+      case 'zond_uninstallFilter':
         this._rpcRequest(payload, NOOP);
         result = true;
         break;

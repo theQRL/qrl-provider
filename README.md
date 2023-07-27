@@ -1,17 +1,17 @@
-# MetaMask Providers
+# Zond Wallet Providers
 
-The Ethereum provider object injected by MetaMask into various environments.
-Contains a lot of implementation details specific to MetaMask, and is probably
+The Zond provider object injected by Zond Wallet into various environments.
+Contains a lot of implementation details specific to Zond wallet, and is probably
 not suitable for out-of-the-box use with other wallets.
 
 The `BaseProvider` implements the Ethereum JavaScript provider specification ([EIP-1193]), but must be modified by a sub-class in order to function.
 `StreamProvider` is such a sub-class, which synchronizes its state and marshals JSON-RPC messages via a duplex stream.
-`MetamaskInpageProvider` further extends `StreamProvider` to support legacy provider interfaces in addition to [EIP-1193], and is used to instantiate the object injected by MetaMask into web pages as `window.ethereum`.
+`QRLInpageProvider` further extends `StreamProvider` to support legacy provider interfaces in addition to [EIP-1193], and is used to instantiate the object injected by MetaMask into web pages as `window.qrl`.
 
 ## Usage
 
 ```javascript
-import { initializeProvider } from '@metamask/providers';
+import { initializeProvider } from '@theqrl/qrl_providers';
 
 // Create a stream to a remote provider:
 const metamaskStream = new LocalMessageDuplexStream({

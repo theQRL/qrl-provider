@@ -20,13 +20,13 @@ export function createRpcWarningMiddleware(
   return (req, _res, next) => {
     if (
       sentWarnings.ethDecryptDeprecation === false &&
-      req.method === 'eth_decrypt'
+      req.method === 'zond_decrypt'
     ) {
       log.warn(messages.warnings.rpc.ethDecryptDeprecation);
       sentWarnings.ethDecryptDeprecation = true;
     } else if (
       sentWarnings.ethGetEncryptionPublicKeyDeprecation === false &&
-      req.method === 'eth_getEncryptionPublicKey'
+      req.method === 'zond_getEncryptionPublicKey'
     ) {
       log.warn(messages.warnings.rpc.ethGetEncryptionPublicKeyDeprecation);
       sentWarnings.ethGetEncryptionPublicKeyDeprecation = true;

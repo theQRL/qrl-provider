@@ -1,4 +1,4 @@
-import { MetaMaskInpageProvider } from './MetaMaskInpageProvider';
+import { MetaMaskInpageProvider } from './QRLInpageProvider';
 import { ConsoleLike } from './utils';
 
 /**
@@ -31,7 +31,7 @@ export function shimWeb3(
         if (property === 'currentProvider' && !loggedCurrentProvider) {
           loggedCurrentProvider = true;
           log.warn(
-            'You are accessing the MetaMask window.web3.currentProvider shim. This property is deprecated; use window.ethereum instead. For details, see: https://docs.metamask.io/guide/provider-migration.html#replacing-window-web3',
+            'You are accessing the QRL window.web3.currentProvider shim. This property is deprecated; use window.qrl instead. For details, see: https://docs.metamask.io/guide/provider-migration.html#replacing-window-web3',
           );
         } else if (
           property !== 'currentProvider' &&

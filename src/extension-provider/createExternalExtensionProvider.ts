@@ -1,7 +1,7 @@
 import PortStream from 'extension-port-stream';
 import { detect } from 'detect-browser';
 import { Runtime } from 'webextension-polyfill-ts';
-import { MetaMaskInpageProviderStreamName } from '../MetaMaskInpageProvider';
+import { MetaMaskInpageProviderStreamName } from '../QRLInpageProvider';
 import { StreamProvider } from '../StreamProvider';
 import { getDefaultExternalMiddleware } from '../utils';
 import config from './external-extension-config.json';
@@ -29,7 +29,7 @@ export function createExternalExtensionProvider() {
     // constructor.
     provider.initialize();
   } catch (error) {
-    console.dir(`MetaMask connect error.`, error);
+    console.dir(`QRL connect error.`, error);
     throw error;
   }
   return provider;

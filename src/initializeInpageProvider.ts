@@ -2,7 +2,7 @@ import { Duplex } from 'stream';
 import {
   MetaMaskInpageProvider,
   MetaMaskInpageProviderOptions,
-} from './MetaMaskInpageProvider';
+} from './QRLInpageProvider';
 import { shimWeb3 } from './shimWeb3';
 
 interface InitializeProviderOptions extends MetaMaskInpageProviderOptions {
@@ -67,8 +67,8 @@ export function initializeProvider({
 }
 
 /**
- * Sets the given provider instance as window.ethereum and dispatches the
- * 'ethereum#initialized' event on window.
+ * Sets the given provider instance as window.qrl and dispatches the
+ * 'zond#initialized' event on window.
  *
  * @param providerInstance - The provider instance.
  */
@@ -76,5 +76,5 @@ export function setGlobalProvider(
   providerInstance: MetaMaskInpageProvider,
 ): void {
   (window as Record<string, any>).qrl = providerInstance;
-  window.dispatchEvent(new Event('ethereum#initialized'));
+  window.dispatchEvent(new Event('zond#initialized'));
 }

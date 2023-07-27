@@ -140,7 +140,7 @@ export abstract class AbstractStreamProvider extends BaseProvider {
    * @emits BaseProvider#disconnect
    */
   private _handleStreamDisconnect(streamName: string, error: Error) {
-    let warningMsg = `MetaMask: Lost connection to "${streamName}".`;
+    let warningMsg = `QRL: Lost connection to "${streamName}".`;
     if (error?.stack) {
       warningMsg += `\n${error.stack}`;
     }

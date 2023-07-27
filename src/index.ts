@@ -7,7 +7,7 @@ import {
 import {
   MetaMaskInpageProvider,
   MetaMaskInpageProviderStreamName,
-} from './MetaMaskInpageProvider';
+} from './QRLInpageProvider';
 import { shimWeb3 } from './shimWeb3';
 import { StreamProvider } from './StreamProvider';
 
