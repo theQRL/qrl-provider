@@ -36,7 +36,7 @@
     "dist/"
   ],
   "dependencies": {
-    "@metamask/object-multiplex": "^1.1.0",
+    "@metamask/object-multiplex": "^2.0.0",
     "@metamask/safe-event-emitter": "^2.0.0",
     "@types/chrome": "^0.0.136",
     "detect-browser": "^5.2.0",
